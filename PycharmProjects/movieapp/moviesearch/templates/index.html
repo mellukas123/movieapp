@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Movie Search</h1>
+
+    <!-- Search Form -->
+    <form method="GET" action="/search/">
+        <input type="text" name="query" placeholder="Search" value="anyone but you">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Display Search Results -->
+    <h2>Search Results for "anyone but you"</h2>
+    <ul>
+        <li>
+            <h2>Anyone but You</h2>
+            <p>Release Date: Aug. 25, 2024</p>
+            <p>Overview: After an amazing first date, Bea and Ben’s fiery attraction turns ice cold — until they find themselves unexpectedly reunited at a destination wedding in Australia. So they do what any two mature adults would do: pretend to be a couple.</p>
+
+            <!-- Use static tag to reference image -->
+            <img src="{% static 'images/poster.jpg' %}" alt="Anyone but You Poster" onerror="this.src='{% static 'images/placeh
